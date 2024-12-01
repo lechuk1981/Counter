@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     var count = 0
     
+    @IBOutlet weak var counterButton: UIButton!
     @IBOutlet weak var counterLabel: UILabel! {
         didSet {
             counterLabel.text = "Значение счётчика:\(count)"
@@ -26,11 +27,27 @@ class ViewController: UIViewController {
     @IBAction func addCount(_ sender: Any) {
         
         count += 1
-        counterLabel.text = "Значение счётчика:\(count)"
-        
-        print("tap")
+        setLabel(sender,count)
+   
     }
     
+    @IBAction func removeCount(_ sender: Any) {
+        
+        if count > 0 {
+            count -= 1
+        }
+        else {
+            count = 0
+        }
+        setLabel(sender,count)
+    }
+    
+    func setLabel (_ sender: Any,_ count: Int) {
+            
+            counterLabel.text = "Значение счётчика:\(count)"
+        
+        
+    }
     
 }
 

@@ -26,23 +26,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQk-Gw-aOk">
-                                <rect key="frame" x="16" y="284.66666666666669" width="361" height="24"/>
+                                <rect key="frame" x="16" y="573" width="361" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQR-ao-iNP">
+                                <rect key="frame" x="158" y="338" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Минус"/>
+                                <connections>
+                                    <action selector="removeCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNJ-MR-yt4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UtN-3v-BhC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AGb-qA-wNs"/>
-                            <constraint firstItem="UtN-3v-BhC" firstAttribute="top" secondItem="cQk-Gw-aOk" secondAttribute="bottom" constant="100" id="a9T-Xe-CwW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cQk-Gw-aOk" secondAttribute="trailing" constant="16" id="bZM-rV-aGH"/>
-                            <constraint firstItem="UtN-3v-BhC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pJM-Fa-KNb"/>
-                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="s4U-Bf-SXX"/>
+                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGy-Wp-J59"/>
+                            <constraint firstItem="UtN-3v-BhC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Itz-yk-36k"/>
+                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QZC-9B-HCr"/>
+                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="159" id="YoB-BA-xxO"/>
+                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="centerX" secondItem="UtN-3v-BhC" secondAttribute="centerX" id="tUK-oJ-ePq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterButton" destination="UtN-3v-BhC" id="hIv-hz-ZnW"/>
                         <outlet property="counterLabel" destination="cQk-Gw-aOk" id="1jw-NL-W8u"/>
                     </connections>
                 </viewController>
