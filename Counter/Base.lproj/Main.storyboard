@@ -15,16 +15,8 @@
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtN-3v-BhC">
-                                <rect key="frame" x="156.33333333333334" y="408.66666666666669" width="80.666666666666657" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Нажми"/>
-                                <connections>
-                                    <action selector="addCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Fj-dS-gxK"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQk-Gw-aOk">
                                 <rect key="frame" x="16" y="573" width="361" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
@@ -32,27 +24,45 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQR-ao-iNP">
-                                <rect key="frame" x="158" y="338" width="77" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="100" y="390" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Минус"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="large"/>
                                 <connections>
                                     <action selector="removeCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNJ-MR-yt4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtN-3v-BhC">
+                                <rect key="frame" x="229" y="390" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="large"/>
+                                <connections>
+                                    <action selector="addCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Fj-dS-gxK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnm-HO-ona">
+                                <rect key="frame" x="159" y="733" width="75" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Сброс" cornerStyle="large"/>
+                                <connections>
+                                    <action selector="resetCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dJ-bl-MII"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGy-Wp-J59"/>
-                            <constraint firstItem="UtN-3v-BhC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Itz-yk-36k"/>
-                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QZC-9B-HCr"/>
-                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="159" id="YoB-BA-xxO"/>
-                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="centerX" secondItem="UtN-3v-BhC" secondAttribute="centerX" id="tUK-oJ-ePq"/>
+                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8lH-ta-IUa"/>
+                            <constraint firstItem="cQk-Gw-aOk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ti9-OC-amR"/>
+                            <constraint firstItem="Gnm-HO-ona" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UmI-Vi-nGA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cQk-Gw-aOk" secondAttribute="bottom" constant="221" id="bPt-fD-mXc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gnm-HO-ona" secondAttribute="bottom" constant="50.670000000000002" id="cXv-DO-CuL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="counterButton" destination="UtN-3v-BhC" id="hIv-hz-ZnW"/>
+                        <outlet property="counterButton" destination="UtN-3v-BhC" id="7SV-pG-NAh"/>
                         <outlet property="counterLabel" destination="cQk-Gw-aOk" id="1jw-NL-W8u"/>
                     </connections>
                 </viewController>
@@ -64,6 +74,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

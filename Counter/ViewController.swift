@@ -16,7 +16,13 @@ class ViewController: UIViewController {
     
     var count = 0
     
-    @IBOutlet weak var counterButton: UIButton!
+    @IBOutlet weak var counterButton: UIButton! {
+        didSet {
+            counterButton.tintColor = .red
+        }
+        
+    }
+    
     @IBOutlet weak var counterLabel: UILabel! {
         didSet {
             counterLabel.text = "Значение счётчика:\(count)"
@@ -41,9 +47,15 @@ class ViewController: UIViewController {
         }
         setLabel(sender,count)
     }
+    @IBAction func resetCount(_ sender: Any) {
+        
+        count = 0
+        setLabel(sender,count)
+    }
     
     func setLabel (_ sender: Any,_ count: Int) {
             
+        
             counterLabel.text = "Значение счётчика:\(count)"
         
         
